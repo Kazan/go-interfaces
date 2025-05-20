@@ -14,6 +14,7 @@ const (
 // Colorizer is an interface that defines a method for generating random colors.
 type Colorizer interface {
 	Color() string
+	Name() string
 }
 
 // New returns a Colorizer based on the given ColorType.

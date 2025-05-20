@@ -17,3 +17,9 @@ func (c *RandomColorizer) Color() string {
 	b := rand.Intn(256)
 	return fmt.Sprintf("#%02X%02X%02X", r, g, b)
 }
+
+// Name returns the name of the colorizer.
+// It implements the Name method of the Colorizer interface.
+func (c *RandomColorizer) Name() string {
+	return "RandomColorizer"
+}
