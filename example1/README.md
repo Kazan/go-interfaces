@@ -1,0 +1,6 @@
+```
+main
+ |-- greeter
+       |-- colorgen
+       |-- writer
+```

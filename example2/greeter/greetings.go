@@ -2,20 +2,25 @@ package greeter
 
 import (
 	"fmt"
-
-	"github.com/kazan/go-interfaces/example2/colorgen"
-	"github.com/kazan/go-interfaces/example2/writer"
 )
+
+type MyWriter interface {
+	Write(data string) error
+}
+
+type MyColorizer interface {
+	Color() string
+}
 
 // Greeter is a struct that holds a name and a writer.
 type Greeter struct {
 	name   string
-	writer writer.Writer
-	color  colorgen.Colorizer
+	writer MyWriter
+	color  MyColorizer
 }
 
 // NewGreeter creates a new Greeter with the specified name and writer.
-func NewGreeter(name string, w writer.Writer, c colorgen.Colorizer) *Greeter {
+func NewGreeter(name string, w MyWriter, c MyColorizer) *Greeter {
 	return &Greeter{
 		name:   name,
 		writer: w,
