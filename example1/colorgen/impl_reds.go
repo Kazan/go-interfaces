@@ -17,3 +17,9 @@ func (c *RedShadesColorizer) Color() string {
 	b := 0
 	return fmt.Sprintf("#%02X%02X%02X", r, g, b)
 }
+
+// Name returns the name of the colorizer.
+// It implements the Name method of the Colorizer interface.
+func (c *RedShadesColorizer) Name() string {
+	return "RedShadesColorizer"
+}
