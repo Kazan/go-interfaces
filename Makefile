@@ -1,5 +1,5 @@
 install ::
 	@go mod vendor
 
-example1 :: install
+example1 ::
 	@go run example1/main.go
